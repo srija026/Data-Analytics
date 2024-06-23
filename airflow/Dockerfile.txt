@@ -1,0 +1,7 @@
+FROM apache/airflow:2.1.0
+
+COPY requirements.txt /requirements.txt
+
+RUN pip install --no-cache-dir -r /requirements.txt
+
+COPY dags/ /usr/local/airflow/dags/
